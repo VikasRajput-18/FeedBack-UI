@@ -1,13 +1,269 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* background : #FE608C */
+
+body{
+background-color: #1F1D3A;
+cursor: context-menu;
+overflow-x: hidden;
+}
+.header{
+background-color: #141425;
+color : #FE608C;
+padding: 15px;
+text-align: center;
+width: 100vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cont{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+
+.card-display{
+max-width: 700px;
+width: 90%;
+min-width:350px;
+min-height: 200px;
+background-color: white;
+margin: 40px 0px;
+border-radius: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.card-display.reverse{
+background-color: #141425;
+color: white;
+}
+.card-display.light{
+color: #141425;
+background-color: white;
+}
+.display-num{
+position: absolute;
+top : -10px;
+left : -10px;
+height: 60px;
+width: 60px;
+border-radius: 50%;
+background-color: #FE608C;
+color: white;
+font-size: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid #ccc;
+
+}
+
+.display-text{
+font-size: 1.2rem;
+text-align: center;
+font-weight: 500;
+padding: 70px 30px;
+}
+
+.btn{
+position: fixed;
+right: 10%;
+top: 100px;
+background-color: #FE608C;
+padding: 10px 20px;
+border: 0;
+outline: none;
+color: white;
+font-size: 1.1rem;
+cursor: pointer;
+border-radius: 10px;
+}
+
+
+.close{
+position: absolute;
+right: 20px;
+top: 20px;
+color: #FE608C;
+font-size: 1.2rem;
+cursor: pointer;
+border: 0;
+outline: none;
+background-color: transparent;
+}
+.edit{
+position: absolute;
+right: 60px;
+top: 20px;
+border: 0;
+font-size: 1.2rem;
+outline: none;
+background-color: transparent;
+color: rgb(33, 195, 33);
+cursor: pointer;
+}
+
+.empty{
+text-align: center;
+color: rgb(85, 255, 85);
+margin-top: 100px;
+font-size: 3rem;
+font-weight: bold;
+letter-spacing: 4px;
+}
+
+.feedback-stats{
+color: #FE608C;
+display: flex;
+align-items: center;
+justify-content: space-between;
+max-width: 700px;
+width: 90%;
+min-width: 350px;
+margin: 50px auto;
+letter-spacing: 2px;
+}
+
+.form-group{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.input-cont{
+margin-top: 20px;
+border: 1px solid #ccc;
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 40px;
+border-radius: 10px;
+overflow: hidden;
+}
+.input-cont input{
+width: 80%;
+border: 0;
+outline: none;
+padding: 0px 10px;
+font-size: 1.1rem;
+height: 100%;
+}
+
+.send{
+
+height: 100%;
+width: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0px 20px;
+font-size: 1.1rem;
+letter-spacing: 2px;
+display: flex;
+cursor: pointer;
+font-weight: bold;
+border: 0;
+}
+
+.send-primary{
+background-color: #1F1D3A;
+color: white;
+}
+
+.send-secondary{
+background-color: #FE608C;
+color: white;
+}
+
+.msg{
+color: red;
+font-size: 0.9rem;
+margin-top: 10px;
+}
+
+.send:disabled,
+.send[disabled]{
+background-color: #ccc;
+}
+
+.rating-select{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+list-style: none;
+gap:20px;
+margin-top: 20px;
+}
+
+.hidebox{
+display: none;
+}
+
+label{
+cursor: pointer;
+background-color: rgb(238, 238, 238);
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+transition: all 0.2s ease-in-out;
+margin-bottom: 20px;
+}
+
+ul li input[type='radio']:checked + label{
+
+background-color: #FE608C;
+color: white;
+
+}
+
+label:hover{
+background-color: #FE608C;
+color: white;
+}
+
+.about{
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.col{
+display: flex;
+flex-direction: column;
+}
+
+.col p{
+font-size: 1.1rem;
+margin-top: 18px;
+}
+
+.icons{
+font-size: 2rem;
+color: #FE608C;
+position: fixed;
+right: 10px;
+bottom: 20px;
+}
+
+.goback{
+text-decoration: none;
+margin-top: 10px;
+font-size: 1.5rem;
+color: #FE608C;
+}
+
+
+.form-cont{
+    padding: 50px 30px;
 }

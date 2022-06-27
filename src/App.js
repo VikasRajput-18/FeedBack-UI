@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { NavLink, Routes, Route } from "react-router-dom";
+
+import Header from "./components/Header";
+import FeedbackList from "./components/FeedbackList";
+import About from "./components/Pages/About";
+import FeedbackStats from "./components/FeedbackStats";
+import FeedbackForm from "./components/FeedbackForm";
+import { BsQuestionLg } from "react-icons/bs";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <>
+              <FeedbackForm />
+              <FeedbackStats />
+              <FeedbackList />
+              <NavLink to="/about">
+                <BsQuestionLg className="icons" />
+              </NavLink>
+            </>
+          }
+        ></Route>
+        <Route path="/about" element={<About />}></Route>
+      </Routes>
+    </>
   );
 }
 
